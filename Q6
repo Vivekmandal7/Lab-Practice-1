@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    float principal, interestRate, balance;
+
+    printf("Enter principal amount: ");
+    scanf("%f", &principal);
+
+    printf("Enter interest rate: ");
+    scanf("%f", &interestRate);
+
+    for (int i = 1; i <= 5; i++) {
+        balance = principal * (1 + interestRate / 100);
+        printf("Year %d - Balance: %.2f\n", i, balance);
+        principal = balance;
+    }
+
+    return 0;
+}
